@@ -1,0 +1,792 @@
+/* ------ Спецификация ------ */
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	color: #6c7279;
+	padding: 0;
+	letter-spacing: 0em;
+	margin: 0;
+	font-size: 14px;
+}
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+p {
+	margin: 0;
+    font-size: 14px;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 36px;
+	font-family: 'Ubuntu', sans-serif;;
+}
+h2 {
+	font-size: 36px;
+	font-family: 'Ubuntu', sans-serif;
+}
+h3 {
+	font-size: 24px;
+}
+h6 {
+	font-size: 19px;
+}
+a, a:hover, a:active {
+	text-decoration: none;
+}
+a, button, input {
+	transition: all 0.5s ease;
+}
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+{
+	outline: none;
+}
+.container {
+	padding: 0;
+}
+.btn {
+	margin: 0 auto;
+	font-size: 13px;
+    color: #ffffff;
+    border: 0px;
+	background-color: #1F2326;
+	text-align: center;
+	display: block;
+	padding: 16px 24px;
+}
+
+.btn:hover {
+	background: #353A3E;
+	color: #ffffff;
+}
+.btn:focus {
+    box-shadow: none;
+}
+
+/* ------ Первый экран ------ */
+
+.header { /* расхождение */
+	color: #fff;
+    background: url(../img/backgr.svg) 20%;
+	background-position: bottom;
+	background-repeat: repeat-x;
+}
+.nav-wrap {
+	padding-top: 39.7px;
+    margin-bottom: 104.56px;
+}
+.nav-wrap .container .row {
+	align-items: center;
+}
+.top-menu {
+	display: flex;
+}
+/* menu__item */
+.menu__item {
+    font-size: 14px;
+	line-height: 16px;
+    font-family: 'Ubuntu', sans-serif;
+	color: #1F2326;
+	text-align: center;
+	padding-right: 32px;
+}
+.menu__item a {
+	color: #1F2326;
+}
+.menu__item:first-child {
+	padding-left: 0px;
+}
+.menu__item:last-child {
+	padding-right: 0px;
+}
+.menu__item a:hover {
+	border-bottom: 1px solid;
+}
+/* Подменю */
+.fa {
+  font-family: "FontAwesome";
+  color: inherit;
+  padding-right: 5px;
+}
+/*-- Dropdown --*/
+.dropdown {
+	margin-right: 32px;
+}
+.dropdown a {
+	color: #1F2326;
+}
+.dropdown-menu {
+	padding: 24px 32px;
+}
+.dropdown-menu li {
+	margin-bottom: 24px;
+}
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+	position: absolute;
+	width: 212px;
+}
+/* Dropdown конец */
+
+.mobile-menu {
+	display: none;
+	padding-top: 15px;
+}
+.mobile-menu a {
+	color: #1F2326;
+	font-size: 26px;
+}
+.question {
+	font-size: 14px;
+	line-height: 16px;
+	text-decoration: none;
+	color: #1F2326;
+}
+.question a:focus {
+	color: #1F2326;
+}
+.question i {
+	height: 20.36px;
+	color: #1F2326;
+}
+.question span:hover {
+	border-bottom: 1px solid;
+	color: #1F2326;
+}
+.phone {
+	width: 165px;
+	font-size: 14px;
+	line-height: 16px;
+}
+.offer__title {
+	color: #1F2326;
+	margin-top: 38px;
+	margin-bottom: 24px;
+	letter-spacing: 0em;
+}
+.offer__text {
+    color: #1F2326;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+	line-height: 1.375em;
+	margin-bottom: 48px;
+	font-weight: normal;
+}
+.offer .btn {
+	width: 248px;
+	margin: 0;
+}
+.offer__list {
+	margin-left: auto;
+	margin-bottom: 112px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(../img/ricardo.svg) no-repeat;
+	background-size: contain;
+	width: 500px;
+	height: 500px;
+}
+.offer__list ul {
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 32px;
+	width: 276px;
+	height: 268px;
+    color: #1F2326;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+	line-height: 1.32em;
+	margin-bottom: 20px;
+	font-weight: bold;
+	background: #CDECF1;	
+}
+.offer__list ul li {
+	line-height: 28px;
+	padding-bottom: 8px;
+}
+.offer__list ul li:last-child {
+	padding-bottom: 0px;
+}
+.offer__list img {
+	padding-right: 16px;
+}
+.offer__list a {
+	color: #1F2326;
+}
+.offer__list span:hover {
+	border-bottom: 1px solid;
+}
+
+/* ------ Второй экран ------ */
+
+.advantages {
+	background: url(../img/alex-loup-Md6.jpg);
+	color: #1F2326;
+	padding: 95px 0px 93px 0px;
+}
+.form {
+	max-width: 555px;
+    width: 100%;
+	padding: 48px;
+	outline: 10px solid #cdecf1; /* Пунктирная рамка */
+    outline-offset: -10px; 
+	text-align: center;
+	background-color: #ffffff;
+}
+form {
+	text-align: left;
+}
+.form h3 {
+	font-weight: bold;
+	line-height: 28px;
+	margin-bottom: 24px;
+}
+.form p {
+	margin-bottom: 56px;
+}
+label {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-bottom: 47px;
+	color: #757F86;
+}
+.label span {
+	position: absolute;
+	top: -10px;
+	margin-left: 14px;
+	background-color: #ffffff;
+	padding: 0 4px;
+}
+input {
+	height: 48px;
+	font-size: 14px;
+	line-height: 22px;
+	border: 1px solid;
+	border-radius: 5px;
+	color: #A7B6C1;
+	padding-left: 17px; 
+}
+form .btn {
+	margin-right: 16px;
+}
+form span {
+	color: #757F86;
+}
+form a {
+	color: #757F86;
+	border-bottom: 1px solid;
+	text-decoration: none;
+}
+form a:hover {
+	color: #1F2326;
+}
+.advantages__items {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 28px;
+	max-width: 493px;
+	margin-bottom: 40px;
+	align-items: center;
+}
+.advantages__items_img {
+	display: flex;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	background: #cdecf1;
+	border-radius: 50%;
+	align-items: center;
+	margin: 0 16px 0 48px;
+}
+.advantages__items_img:last-child {
+	margin-bottom: 0px;
+}
+.advantages__items p {
+	margin: 0;
+}
+
+/* ------ Третий экран ------ */
+
+.product {
+	padding: 158px 0px;
+	color: #1F2326;
+}
+.product__title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.product__title h2 {
+	margin-bottom: 24px;
+}
+.product__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.product__txt {
+	padding: 0px;
+}
+.product__text {
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+	line-height: 1.375em;
+	margin: 24px 0px;
+	font-weight: normal;
+}
+.product__text span {
+	display: block;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 28px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+.product__text i {
+	align-items: center;
+}
+.product__text li {
+	margin-bottom: 8px;
+}
+.product__list {
+	margin-top: 30px; /*114px*/
+}
+.product__list ul {
+	flex-direction: column;
+}
+.product__list li {
+	margin-bottom: 24px;
+}
+.product__list li:last-child {
+	margin-bottom: 0px;
+}
+.product__list a {
+	color: #1F2326;
+}
+.product .btn {
+	width: 248px;
+	margin: 0;
+	margin-right: 24px;
+}
+.product i {
+	font-size: 2px;
+}
+.product__list i {
+	font-size: 6px;
+	color: #1F2326;
+	margin-right: 6px;
+}
+.product__box {
+	display: flex;
+	align-items: center;
+}
+.product__dosage {
+	background-color: #cdecf1;
+	padding: 32px;
+	border-radius: 5px;
+/*	margin-top: 132px; */
+}
+.product__list .icon-blue {
+	color: #49C7DB;
+}
+.product__dosage_item {
+	flex-direction: column;
+}
+.product__dosage_item span {
+	display: block;
+	font-size: 14px;
+	line-height: 22px;
+}
+.product__dosage_item span:first-child {
+	font-weight: bold;
+}
+.product__download {
+	align-items: center;
+}
+.product__download img {
+	margin-right: 8px;
+}
+.product__download a {
+	color: #1F2326;
+}
+.product__download a:hover {
+	border-bottom: 1px solid;
+}
+.product__text .product__color_item {
+	display: flex;
+	width: 74px;
+	height: 38px;
+	color: #ffffff;
+	border-radius: 3px;
+	margin-right: 16px;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: normal;
+}
+.product__color_item {
+	margin-right: 0px;
+}
+.product__color_item:nth-child(1) {
+	background-color: #FF0C0C;
+}
+.product__color_item:nth-child(2) {
+	background-color: #FFA800;
+}
+.product__color_item:nth-child(3) {
+	background-color: #FFE70C;
+	color:#1F2326;
+}
+.product__color_item:nth-child(4) {
+	background-color: #683200;
+}
+.product__color_item:nth-child(5) {
+	background-color: #058703;
+}
+.product__color_item:nth-child(6) {
+	background-color: #414141;
+}
+
+/* ------ О добавках Руспласт------ */
+
+.additives {
+	background: url(../img/alex-loup-Md6.jpg);
+	padding: 103px;
+	color: #1F2326; 
+	text-align: center;
+}
+.additives_item {
+	width: 750px;
+	padding: 48px 32px;
+	outline: 10px solid #cdecf1; /* Пунктирная рамка */
+    outline-offset: -10px; 
+    text-align: center;
+}
+.additives_item h2 {
+	margin-bottom: 32px;
+}
+.additives_item p {
+	font-size: 14px;
+	line-height: 22px;
+	text-align: justify;
+}
+.additives_item .btn {
+	width: 248px;
+}
+
+/* ------ Контакты ------ */
+.contacts {
+	padding: 120px;
+	color: #1F2326; 
+}
+.contacts__list li {
+	align-items: center;
+	margin-bottom: 16px;
+}
+.contacts__list li:last-child {
+	margin-bottom: 88px;
+}
+.contacts__list_img {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	background-color: #CDECF1;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	margin-right: 16px;
+}.contacts__list a {
+	color: #1F2326;
+}
+.contacts__list a:hover {
+	border-bottom: 1px solid;
+}
+/* ------ Подвал ------ */
+
+.footer {
+	background-color: #CDECF1;
+	font-size: 14px;
+	line-height: 1.3em;
+	color: #1F2326;
+}
+.footer-info {
+	margin: 26px 0px;
+}
+.politic {
+	text-align: right;	
+}
+.politic a {
+	color: #1F2326;
+}
+.politic a:hover {
+	border-bottom: 1px solid;
+    color: #1F2326;
+}
+/* ОС */
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 0.91);
+    overflow: hidden;
+    display: none;
+}
+
+label.error {
+    font-size: 12px;
+    color: red;
+    position: absolute;
+}
+
+input.error {
+    border: 1px solid red !important;
+}
+
+input.valid {
+    border: 1px solid green !important;
+}
+
+#loader img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+}
+
+#overlay {
+display: none;
+position: absolute;
+width: 100%;
+height: 100%;
+background: #000c;
+left: 0px;
+top: 0px;
+cursor: pointer;
+}
+#thx {
+background: #fff;
+position: absolute;
+left: 50%;
+margin-left: -170px;
+top: 50%;
+padding: 30px;
+margin-top: -20px;
+}
+/* Скролл экранов */ 
+
+/* Media Queries */
+
+/* 1024 px - 1200px */
+@media screen and (max-width: 1200px) {
+
+}
+/* 992 px - 1024px */
+@media screen and (max-width: 1024px) {
+	.header .top-menu {
+		display: none;
+	}
+	.offer__list {
+		width: 450px;
+   		height: 450px;
+	}
+	.contacts .form p {
+		margin-bottom: 27px;
+	}
+	.contacts .form label {
+		margin-bottom: 27px;
+	}
+}
+/* 768 - 992 px */
+@media screen and (max-width: 992px) {
+	.advantages .form {
+		margin: 0 auto;
+		margin-bottom: 40px;
+	} 
+	.advantages__items {
+		margin: 0 auto 40px;
+	}
+	.offer__list {
+		height: 350px;
+		width: 350px;
+	}
+
+}
+
+/* 576 - 768 px */
+@media screen and (max-width: 768px) {
+	h1, h2 {
+		font-size: 24px;
+	}
+	.question, .first-btn {
+		display: none;
+	}
+	.advantages .form {
+		display: none;
+	}
+	.product__list {
+		display: none;
+	}
+	.offer__list {
+		height: 380px;
+	}
+	.product__button .btn {
+		padding: 12px;
+	}
+	.product__color {
+		flex-wrap: wrap;
+	}
+	.contacts {
+		padding: 40px 16px;
+	}
+	.contacts__list li:last-child span {
+		width: 300px;
+	}
+	form span {
+		font-size: 10px;
+	}
+}
+
+/* 414 - 576 px */
+@media screen and (max-width: 576px) {
+	.header {
+		background:  #fff;
+	}
+	.container {
+		padding: 0px 16px;
+	}
+	h1, h2 {
+		font-size: 18px;
+	}
+	h3 {
+		font-size: 16px;
+	}
+	.nav-wrap {
+		margin-bottom: 18px;
+	}
+	.logo {
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.nav-wrap .phone {
+		display: none;
+	}
+	.offer__txt {
+		text-align: center;
+	}
+	.offer__text {
+		font-size: 12px;
+		margin: 0px 16px;
+		margin-bottom: 32px;
+	}
+	.offer .phone {
+		margin: 0 auto;
+	}
+	.offer__list {
+		background:  #fff;
+		width: 290px;
+		height: 290px;
+		margin: 25px auto;
+	}
+	.advantages {
+		padding: 48px 0px;
+	}
+	
+	.advantages__items p {
+		width: 216px;
+	}
+	.advantages__items_img {
+		margin: 0 32px;
+	}
+	.product {
+		padding: 40px 0px;
+	}
+	.product__title {
+		align-items: center;
+	}
+	.product__wrap {
+		flex-flow: column-reverse;
+	}
+	.product__list {
+		display: none;
+	}
+	.product__button {
+		flex-direction: column;
+		align-items: center;
+	}
+	.product .btn {
+		margin-right: 0px;
+		margin-bottom: 24px;
+	}
+	.product__text span {
+		font-size: 12px;
+	}
+	.product__dosage {
+		margin-top: 40px;
+		margin-bottom: 0px;
+	}
+	.additives {
+		padding: 40px 0px;
+	}
+	.contacts {
+		text-align: center;	
+		padding: 40px 0px;
+	}
+	.contacts span {
+		max-width: 210px;
+		width: 100%;
+		text-align: left;
+	}
+	.contacts__list li:last-child span {
+		width: 200px;
+	}
+	.contacts .form {
+		margin: 0 auto;
+	}
+	.contacts .form p {
+		font-size: 12px;
+	}
+	.contacts .form label {
+		margin-bottom: 17px;
+	}
+	.contacts .form label span {
+		max-width: 100px;
+		width: 100%;
+		text-align: left;
+	}
+	
+	.contacts .form input {
+		height: 28px;
+	}
+	.contacts .form .btn {
+		margin: 0 0 15px 0;
+	}
+	.footer {
+		text-align: center;	
+	}
+	.politic {
+		text-align: center;	
+	}
+}
+/* 320 - 414 px */
+@media screen and (max-width: 414px) {
+	.advantages__items_img {
+		margin: 0 16px 0 0;
+	}
+}
